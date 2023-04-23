@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [profileinfo, setprofileinfo] = useState({});
+  const [profileinfo, setprofileinfo] = useState({
+    picture: "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+  });
     useEffect(() => {
         if(localStorage.getItem("authtoken")){
+          var profilepic = "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            if(localStorage.getItem("picture")){
+              profilepic = process.env.REACT_APP_CLOUDINARY_URL + localStorage.getItem("picture") +".png"
+            }
+            console.log(profilepic)
             setprofileinfo({
                 authtoken : localStorage.getItem("authtoken"),
                 firstname : localStorage.getItem("firstname"),
                 user : localStorage.getItem("user"),
-                picture : localStorage.getItem("picture")
+                picture : profilepic
             })
         }
-        
-    }, [])
+
+        console.log(setprofileinfo)
+      },[]
+    )
 
     const signout = ()=>{
         console.log("here in signout")
@@ -94,11 +103,12 @@ const Navbar = () => {
                   aria-expanded="false"
                 >
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    src={profileinfo.picture}
                     class="rounded-circle"
-                    height="25"
+                    height="35"
+                    width="35"
                     alt="Black and White Portrait of a Man"
-                    loading="lazy"
+              
                   />
                 </a>
                 <ul
@@ -143,12 +153,14 @@ const Navbar = () => {
                     
                 
                 or
+                <a href="/customer/signup ">
                 <button
                   type="button"
                   class="mx-2 btn btn-secondary btn-rounded"
                 >
                   Signup{" "}
                 </button>
+                </a>
               </>
             )}
           </div>
@@ -162,3 +174,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// https://res.cloudinary.com/daqjfe5sx/image/upload/Nordic_stores/NDj3jzPqr-profilepic.jpeg.png

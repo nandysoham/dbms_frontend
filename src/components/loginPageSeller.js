@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 
 // env.config({ path: __dirname + '/./../.env' })
-const LoginPageCustomer = () => {
+const LoginPageSeller = () => {
     let navigate = useNavigate();
     const [signin, setsignin] = useState({email:"", password:""})
 
@@ -18,7 +18,7 @@ const LoginPageCustomer = () => {
         console.log(process.env.REACT_APP_BACKENDURL)
 
     
-        const response = await fetch(process.env.REACT_APP_BACKENDURL + "/api/customer/login",{
+        const response = await fetch(process.env.REACT_APP_BACKENDURL + "/api/seller/login",{
 
             method :"POST",
             headers : {
@@ -36,8 +36,8 @@ const LoginPageCustomer = () => {
         if(token.success == "true"){
             console.log(token.authtoken);
             localStorage.setItem("authtoken",token.authtoken);
-            localStorage.setItem("user","customer");
-            localStorage.setItem("firstname",token.user.firstname);
+            localStorage.setItem("user","seller");
+            localStorage.setItem("firstname",token.user.companyname);
             localStorage.setItem("picture",token.user.profilePicture.img);
             navigate("../", { replace: true });
         }
@@ -56,10 +56,10 @@ const LoginPageCustomer = () => {
 
   return (
     <div>
-     
+        
       <div className="container" style={{minHeight: "100vh", width:"50vw"}}>
       <div className="container">
-        <h2 className="my-5 text-center " style={{ paddingTop:"80px"}}> User Login</h2>
+        <h2 className="my-5 text-center " style={{ paddingTop:"80px"}}> Seller Login</h2>
     </div>
         <form onSubmit={handleClick}>
           <div class="form-group">
@@ -103,4 +103,4 @@ const LoginPageCustomer = () => {
   );
 };
 
-export default LoginPageCustomer;
+export default LoginPageSeller;
