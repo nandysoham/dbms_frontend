@@ -38,7 +38,9 @@ const LoginPageCustomer = () => {
             localStorage.setItem("authtoken",token.authtoken);
             localStorage.setItem("user","customer");
             localStorage.setItem("firstname",token.user.firstname);
+            if(token.user.profilePicture){
             localStorage.setItem("picture",token.user.profilePicture.img);
+            }
             navigate("../", { replace: true });
         }
         else{
