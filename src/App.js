@@ -9,7 +9,9 @@ import SignupPageCustomer from './components/SignupPageCustomer';
 import LoginPageSeller from './components/loginPageSeller';
 import SignupPageSeller from './components/SignupPageSeller';
 import CustomerDashboard from './components/Dashboard';
+
 import Cart from './components/Cart';
+import ChosePayment from './components/ChosePayment';
 function App() {
   return (
     <ProSidebarProvider>
@@ -25,6 +27,7 @@ function App() {
           <Route exact path = "/customer/dashboard" element={<CustomerDashboard/>} ></Route>
          <Route exact path = "/seller/login" element={<LoginPageSeller/>} ></Route>
          <Route exact path = "/seller/signup" element={<SignupPageSeller/>} ></Route>
+         <Route exact path = "/chosepayment" element={<ChosePayment/>} ></Route>
 
           </Routes>
           </Router>

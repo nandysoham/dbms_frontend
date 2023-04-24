@@ -4,9 +4,9 @@ import { json } from 'react-router-dom'
 const Cart = () => {
     const [cart, setcart] = useState([])
     const [change, setchange] = useState(false)
-    const addtocart = async (e)=>{
+    const addtocart = async (e, productid)=>{
         console.log("here in addcart")
-        console.log( e.target.name)
+        console.log(productid)
         const response = await fetch(process.env.REACT_APP_BACKENDURL + "/api/addtocart",{
 
             method :"POST",
@@ -15,17 +15,16 @@ const Cart = () => {
                 'signtoken' : process.env.REACT_APP_SIGNTOKEN,
                 'auth-token' : localStorage.getItem("authtoken")
             },
-            body : JSON.stringify({"productid" : e.target.name})
+            body : JSON.stringify({"productid" : productid})
 
         })
 
         const resp = await response.json()
         console.log(resp)
-        setcart(resp.newcart)
 
     }
 
-    const removeone = async (e)=>{
+    const removeone = async (e, productid)=>{
         e.preventDefault();
         console.log(e.target.name)
         const response = await fetch(process.env.REACT_APP_BACKENDURL + "/api/removeonefromcart",{
@@ -36,15 +35,12 @@ const Cart = () => {
                 'signtoken' : process.env.REACT_APP_SIGNTOKEN,
                 'auth-token' : localStorage.getItem("authtoken")
             },
-            body : JSON.stringify({"productid" : e.target.name})
+            body : JSON.stringify({"productid" : productid})
 
         })
 
         const resp = await response.json()
         console.log(resp)
-        setcart(resp.newcart)
-        console.log(cart)
-
     }
 
     const fetchCart = async ()=>{
@@ -95,7 +91,7 @@ const Cart = () => {
     useEffect(()=>{
         fetchCart()
         console.log(cart)
-    })
+    }, [])
 
   return (
     <div>
@@ -139,14 +135,14 @@ const Cart = () => {
                 </div>
                 <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                   <button class="btn btn-link px-2" name ={element.productid}
-                    onClick={removeone}>
+                    onClick={event => {removeone(event, element.productid)}}>
                     <i class="fas fa-minus"></i>
                   </button>
   
                   <input id="form1" min="0" name="quantity" value={element.quantity} type="number"
                     class="form-control form-control-sm" disabled/>
   
-                  <button class="btn btn-link px-2" name ={element.productid} onClick={addtocart}>
+                  <button class="btn btn-link px-2" name ={element.productid} onClick={event => {addtocart(event, element.productid)}}>
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
@@ -160,7 +156,7 @@ const Cart = () => {
             </div>
           </div>
         })}
-        e.preventDefault();
+
 
  
 
@@ -176,6 +172,7 @@ const Cart = () => {
 
         <div class="card">
           <div class="card-body">
+            <a href="/chosepayment"></a>
             <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
           </div>
         </div>
