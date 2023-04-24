@@ -41,19 +41,27 @@ const ChosePayment = () => {
             // console.log(resp)
             if(resp.success == "true"){
                 obj.product = resp.product
+                if(obj.product.pictures.length == 0){
+                  obj.product.pictures.push({
+                    img : "Nordic_stores/itemplaceholder_u5lfrf"
+                  })
+                }
                 new_order.push(obj)
             }
         }
+        console.log(resp.final_part)
+        settotal(resp.total_amount)
         setorder(new_order)
-
+        localStorage.setItem("pay_orderid", resp.orderid)
+    
         }
 
     }
-
+    const fixed = "fixed"
     useEffect(()=>{
         console.log("I am from useEffect")
         getorder()
-    }, [])
+    }, [fixed])
   return (
     <div className="container">
         <section class="vh-100" style={{backgroundColor: "#fdccbc;"}}>
@@ -67,7 +75,7 @@ const ChosePayment = () => {
   
               <div class="row align-items-center">
                 <div class="col-md-2">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/1.webp"
+                  <img src={process.env.REACT_APP_CLOUDINARY_URL + element.product.pictures[0].img +".png"}
                     class="img-fluid" alt="Generic placeholder image"/>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center">
@@ -114,7 +122,7 @@ const ChosePayment = () => {
             <div class="float-end">
               <p class="mb-0 me-5 d-flex align-items-center">
                 <span class="small text-muted me-2">Order total:</span> <span
-                  class="lead fw-normal">{}</span>
+                  class="lead fw-normal">{total}</span>
               </p>
             </div>
 
@@ -122,9 +130,11 @@ const ChosePayment = () => {
         </div>
 
         <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-light btn-lg me-2">Continue shopping</button>
-          <button type="button" class="btn btn-primary btn-lg">Add to cart</button>
+          <a href="/makepayment">
+          <button type="button" class="btn btn-primary btn-lg">Proceed to Payment</button>
+          </a>
         </div>
+
 
       </div>
     </div>

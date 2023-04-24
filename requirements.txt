@@ -1,0 +1,11 @@
+1. create order from the chose payment page
+2. creat another page from which optins of debit and credit card can be selected
+3. complete the entire transaction
+4. create customer dashboard
+5. create customer orders --> combine returns + delivery updates
+6. create seller dashboard --> products sold
+7. create seller accepting returns form
+8. seller utility to add products
+7. add advertisement from seller
+8. create the search box in the main window
+9. float advertisement in the main window

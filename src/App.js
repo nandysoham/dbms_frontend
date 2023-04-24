@@ -12,6 +12,13 @@ import CustomerDashboard from './components/Dashboard';
 
 import Cart from './components/Cart';
 import ChosePayment from './components/ChosePayment';
+import MakePayment from './components/MakePayment';
+import CustomerOrders from './components/CustomerOrders';
+import CustomerTrackOrders from './components/CustomerTrackOrders';
+import SellerOrders from './components/SellerOrders';
+import ReturnRequests from './components/ReturnRequests';
+import ProductAdd from './components/ProductAdd';
+import ItemView from './components/ItemView';
 function App() {
   return (
     <ProSidebarProvider>
@@ -28,7 +35,13 @@ function App() {
          <Route exact path = "/seller/login" element={<LoginPageSeller/>} ></Route>
          <Route exact path = "/seller/signup" element={<SignupPageSeller/>} ></Route>
          <Route exact path = "/chosepayment" element={<ChosePayment/>} ></Route>
-
+         <Route exact path = "/makepayment" element={<MakePayment/>} ></Route>
+         <Route exact path = "/customer/orders" element={<CustomerOrders/>} ></Route>
+         <Route exact path = "/seller/orders" element={<SellerOrders/>} ></Route>
+         <Route exact path = "/seller/productadd" element={<ProductAdd/>} ></Route>
+         <Route exact path = "/seller/returnrequests" element={<ReturnRequests/>} ></Route>
+         <Route exact path = "/customer/:productid/:orderid" element={<CustomerTrackOrders/>} ></Route>
+         <Route exact path = "/itemview/:productid" element={<ItemView/>} ></Route>
           </Routes>
           </Router>
     </div>

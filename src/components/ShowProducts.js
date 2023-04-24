@@ -53,8 +53,10 @@ const ShowProducts = () => {
         fecthProducts()
     }, [])
     return (
-        <div className='container'>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+    
+        <div className='container my-5'>
+            <h2>Search from a range of Products</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4 my-5">
                 {products.map((element, idx) => {
                     return <div class="card mx-2 my-2" style={{ width: "18rem" }} key={idx}>
                         <img src={element.pictures.length ? process.env.REACT_APP_CLOUDINARY_URL + element.pictures[0].img+".png" : "https://archive.org/download/placeholder-image/placeholder-image.jpg"} class="card-img-top" alt="..." />
@@ -63,8 +65,9 @@ const ShowProducts = () => {
                             <p class="card-text">{element.description}</p>
                             <div className='container'> 
                             <button class="btn btn-primary mx-3" onClick={event => {addtocart(event, element._id)}}>Buy</button>
+                            <a href={"/itemview/"+element._id}>
                             <button href="#" class="btn btn-secondary">View</button>
-
+                            </a>
                             </div>
                         </div>
                     </div>

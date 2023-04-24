@@ -91,7 +91,7 @@ const Cart = () => {
     useEffect(()=>{
         fetchCart()
         console.log(cart)
-    }, [])
+    }, [cart])
 
   return (
     <div>
@@ -172,8 +172,9 @@ const Cart = () => {
 
         <div class="card">
           <div class="card-body">
-            <a href="/chosepayment"></a>
+            <a href="/chosepayment">
             <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+            </a>
           </div>
         </div>
 
