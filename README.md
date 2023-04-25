@@ -152,6 +152,7 @@ Here is a snap of the seller doing it
 
 #### All images and file assets are stored on cloud 
 A snanpshot of cloud space
+![image](https://user-images.githubusercontent.com/67374926/234357638-0d80e941-96cd-4098-a8df-93fedf9efe6f.png)
 
 
 
