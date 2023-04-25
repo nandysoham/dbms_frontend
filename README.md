@@ -87,6 +87,9 @@ Notice the passwords are always stored in hashes and the profile picture is stor
 you can directly access the pic from cloudinary
 
 #### Seller Creation and login (Same as user)
+![image](https://user-images.githubusercontent.com/67374926/234345132-6de9b3b1-bc5e-426e-b887-367d2a4a2074.png)
+
+
 Attaching a screenshot of seller login
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234301286-c23a905e-aef8-48b9-bdc0-5b42eff0fc4b.png">
 
