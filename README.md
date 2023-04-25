@@ -3,7 +3,7 @@
 
 #### Soham Nandy CS20B046
 
-
+DB diagram: https://dbdiagram.io/d/643a2e876b31947051a22c7c
 Tech Stack Used
 #### Databases
 1. Mongoose as NoSql Database
