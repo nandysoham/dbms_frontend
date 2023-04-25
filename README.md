@@ -133,7 +133,11 @@ Here is a snap of the seller doing it
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234310300-00eb5232-de51-4af0-bb81-78026ca2fd23.png">
 
 
+#### Once return is done, Payment gets initiated and and is showcased in the user's orders list
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234311022-22de2bcb-c12d-4c15-b891-e037488088a7.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234311136-8d879703-c7b1-4311-8e44-21e910f7d49e.png">
+
+####
 
 
 
-#### Now the user can search for orders here in hs dashboard
