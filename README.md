@@ -119,4 +119,21 @@ Here for xample iphone
 I capture the credit card no and the credit cvv to feed in the payment portal
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234306892-4f6f98f9-8383-4058-9248-bf56cdb9ab90.png">
 
-### the final screen
+#### Now the user can search for orders here in hs dashboard
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234308466-355fd2f6-34aa-400d-942b-0802da233e04.png">
+
+#### User see the delivery status of the product
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234309656-2a4c4ae1-b9f3-4291-97c8-8daf1dd3d0c4.png">
+
+#### And the user can apply for a return too
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234309906-34a99557-68dc-4d92-8f5a-9418fa3d2783.png">
+
+#### But the request needs to be confirmed by the seller inorder to confirm it
+Here is a snap of the seller doing it
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234310300-00eb5232-de51-4af0-bb81-78026ca2fd23.png">
+
+
+
+
+
+#### Now the user can search for orders here in hs dashboard
