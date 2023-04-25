@@ -137,7 +137,17 @@ Here is a snap of the seller doing it
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234311022-22de2bcb-c12d-4c15-b891-e037488088a7.png">
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234311136-8d879703-c7b1-4311-8e44-21e910f7d49e.png">
 
-####
+#### A peek at the seller's Dashbaord
+![image](https://user-images.githubusercontent.com/67374926/234330439-b31f1357-c753-4fac-a2af-f9611627d6b1.png)
+
+#### Seller Registering for an advertisement
+![image](https://user-images.githubusercontent.com/67374926/234330778-c5cafe04-7957-49bb-8a7a-585a19e8415f.png)
+
+
+#### All images and file assets are stored on cloud 
+A snanpshot of cloud space
+
+
 
 
 
