@@ -98,3 +98,25 @@ Lets go on adding a few more products
 ### the final screen
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234304030-a668295a-201f-4921-a213-068c83ea494a.png">
 
+#### User acn search the with some keywords
+Here for xample iphone
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234305453-f671b360-04a3-47f1-8ddf-78c1baaeb5d1.png">
+
+#### Each product also has its individual page
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234305804-947ae70d-b404-4b5f-b9dd-81363a33facd.png">
+
+#### User adding some products to his cart
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234306107-7526622e-6a17-454e-98f5-775236d489a0.png">
+
+#### And proceeds to Payment
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234306283-6e935c43-f0c6-4809-8ba4-e5b0c323001c.png">
+
+#### And here comes The payment portal
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234308098-aea34f27-ab22-4bad-aab8-cfc830edf842.png">
+
+
+#### Now here comes a js script to create a dummy bank as a normal portal ransaction is rather invisible 
+I capture the credit card no and the credit cvv to feed in the payment portal
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234306892-4f6f98f9-8383-4058-9248-bf56cdb9ab90.png">
+
+### the final screen
