@@ -75,10 +75,12 @@ const CustomerTrackOrders = () => {
             <div className='col md-8'>
                 {
                     delivery.map((element, index)=>{
-                        return <div>
+                        var date = new Date(element.updatedAt)
+                        return <div className="my-3">
                             <h6> {element.comment} </h6>
                             Item at
                             <p> {element.address1} , {element.address2}, {element.city} , {element.state}, {element.country} , {element.pincode}</p>
+                            <p>{"at " +date}</p>
                         </div>
                     })
                 }

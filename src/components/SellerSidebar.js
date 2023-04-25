@@ -13,6 +13,8 @@ const SellerSidebar = () => {
                     <MenuItem component={<Link to="/seller/orders" />}> My Orders</MenuItem>
                     <MenuItem component={<Link to="/seller/returnrequests" />}> Return Requests</MenuItem>
                     <MenuItem component={<Link to="/seller/productadd" />}> Feedback</MenuItem>
+                    <MenuItem component={<Link to="/seller/adpage" />}> Ad Advertisement</MenuItem>
+                    
                 </Menu>
             </Sidebar>
         </div>

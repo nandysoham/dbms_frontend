@@ -19,13 +19,17 @@ import SellerOrders from './components/SellerOrders';
 import ReturnRequests from './components/ReturnRequests';
 import ProductAdd from './components/ProductAdd';
 import ItemView from './components/ItemView';
+import ProductSearch from './components/ProductSearch';
+import AdpageSeller from './components/CreateAd';
 function App() {
   return (
     <ProSidebarProvider>
     <div className="App">
-        <Navbar></Navbar>
+        
         <Router>
+        <Navbar></Navbar>
         <Routes>
+          
           <Route exact path = "/" element={<Mainpage/>} ></Route>
           <Route exact path = "/customer/login" element={<LoginPageCustomer/>} ></Route>
           <Route exact path = "/customer/signup" element={<SignupPageCustomer/>} ></Route>
@@ -42,6 +46,8 @@ function App() {
          <Route exact path = "/seller/returnrequests" element={<ReturnRequests/>} ></Route>
          <Route exact path = "/customer/:productid/:orderid" element={<CustomerTrackOrders/>} ></Route>
          <Route exact path = "/itemview/:productid" element={<ItemView/>} ></Route>
+         <Route exact path = "/products/:searchword" element={<ProductSearch/>} ></Route>
+         <Route exact path = "/seller/adpage" element={<AdpageSeller/>} ></Route>
           </Routes>
           </Router>
     </div>

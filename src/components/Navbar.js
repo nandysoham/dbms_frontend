@@ -1,9 +1,27 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  let navigate = useNavigate();
   const [profileinfo, setprofileinfo] = useState({
     picture: "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
   });
+  const [search, setsearch] = useState({searchtext:""})
+
+    const onChange =(e)=>{
+        setsearch({...search,[e.target.name]:e.target.value})
+    }
+
+    const handleClick = (e)=>{
+      e.preventDefault();
+    
+      navigate("/products/"+search.searchtext, { replace: true });
+      // setsignin({email:"", password:""})    // open this if you want your user to reenter the credentials after he logged out
+  }
+
+
+
+
   useEffect(() => {
     if (localStorage.getItem("authtoken")) {
       var profilepic = "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
@@ -81,8 +99,8 @@ const Navbar = () => {
             {/* <!-- Left links --> */}
           </div>
           {/* <!-- Collapsible wrapper --> */}
-          <form class="form-inline my-lg-0" style={{display:"flex", alignItems:"center"}}>
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <form onSubmit={handleClick} class="form-inline my-lg-0" style={{display:"flex", alignItems:"center"}}>
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchtext" onChange={onChange}/>
               <button class="btn btn-outline-success my-2 my-sm-0 mx-2" type="submit">Search</button>
             </form>
             
