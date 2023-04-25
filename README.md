@@ -70,3 +70,20 @@ CLOUDINARY_API_SECRET=
 
 ### Coolest Features of the website
 
+#### User Sign up
+
+![image](https://user-images.githubusercontent.com/67374926/234299513-40bc39cd-c061-4550-9046-1963210afa7e.png)
+
+#### User Dashboard after Login
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/67374926/234299713-ec9d38b0-1b24-40aa-9c00-0a0378999909.png">
+The authentication is backed by jwt and Bcrypt
+Passwords are never stored in plain text in database, instaed they are hahed and the hashes are stored
+whenever a user logs in a jwt token is created ad is stored in localStorage throught the time the user is logged in
+
+#### Userdata as stored in Database
+
+Ofcourse it is empty as it's a new suer
+
+#### Seller adding new Product
+![image](https://user-images.githubusercontent.com/67374926/234299334-722d64b0-bf99-43da-b2ae-7e1d964c5a28.png)
+
