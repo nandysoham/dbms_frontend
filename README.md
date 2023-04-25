@@ -4,7 +4,7 @@
 #### Soham Nandy CS20B046
 
 DB diagram: https://dbdiagram.io/d/643a2e876b31947051a22c7c
-
+Detailed Video: https://drive.google.com/file/d/1hPYV0zzPYygPZLT27XFLNo3xBcyXS7Ja/view
 
 
 ### Tech Stack Used
